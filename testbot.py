@@ -4,6 +4,7 @@ import os
 import json
 from datetime import datetime
 from dotenv import load_dotenv
+from keep_alive import keep_alive
 
 # 봇 토큰 설정
 load_dotenv()
@@ -141,4 +142,5 @@ async def check_dday(interaction: discord.Interaction):
 if TOKEN == '여기에_디스코드_봇_토큰을_붙여넣으세요':
     print("오류: 봇 토큰이 설정되지 않았습니다.")
 else:
+    keep_alive()
     client.run(TOKEN)
